@@ -1,0 +1,63 @@
+<div class = "container">
+    <div class ="card">
+        <h1>basic crud operation form</h1>
+
+        <form>
+        <p>Enter Name to create user</p>
+        <mat-form-field appearance="outline">
+            <mat-label >Name</mat-label>
+            <input name = "name" [(ngModel)] = "user.name" matInput placeholder="Placeholder">
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button color="primary" (click) = "doCreate()">Create</button>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Enter Id to get User</p>
+        <mat-form-field appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Get</button> -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Enter Name and ID for update</p>
+        <mat-form-field appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Update</button> -->
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>Enter ID to delete user</p>
+        <mat-form-field appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Delete</button> -->
+
+        </form>
+
+    </div>
+</div>  
