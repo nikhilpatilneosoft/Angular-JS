@@ -13,9 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { CRUDComponent } from './components/crud/crud.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserserviceService } from './service/userservice.service';
-// import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,8 @@ import { UserserviceService } from './service/userservice.service';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    // HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [MatSnackBar, UserserviceService],
   bootstrap: [AppComponent]

@@ -1,63 +1,113 @@
 <div class = "container">
     <div class ="card">
-        <h1>basic crud operation form</h1>
-
-        <form>
-        <p>Enter Name to create user</p>
-        <mat-form-field appearance="outline">
-            <mat-label >Name</mat-label>
-            <input name = "name" [(ngModel)] = "user.name" matInput placeholder="Placeholder">
-        </mat-form-field>
-        <br>
-
-        <button mat-raised-button color="primary" (click) = "doCreate()">Create</button>
-        
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <p>Enter Id to get User</p>
-        <mat-form-field appearance="outline">
-            <mat-label>ID</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-
-        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Get</button> -->
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <p>Enter Name and ID for update</p>
-        <mat-form-field appearance="outline">
-            <mat-label>ID</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-        <br>
-        <mat-form-field appearance="outline">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-
-        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Update</button> -->
+    <h1>basic crud operation form</h1>
+    
+    <button mat-raised-button color="primary" (click) = "doCreate()">Create</button>
 
 
-        <br>
-        <br>
-        <br>
-        <br>
+    
+    <form>
+    <p>Enter Name to create user</p>
+    <mat-form-field appearance="outline">
+    <mat-label >Name</mat-label>
+    <input name = "name" [(ngModel)] = "name" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <br>
+    
+    <button mat-raised-button color="primary" (click) = "doCreate()">Create</button>
+    
+    
+    </form>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <form>
+    <p>Enter Id to get User</p>
+    <mat-form-field appearance="outline">
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="Placeholder">
+    </mat-form-field>
+    <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Get</button> -->
+    </form>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <form>
+    <p>Enter Name and ID for update</p>
+    <mat-form-field appearance="outline">
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="Placeholder">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Placeholder">
+    </mat-form-field>
+    
+    <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Update</button> -->
+    </form>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <form>
+    <p>Enter ID to delete user</p>
+    <mat-form-field appearance="outline">
+    <mat-label>ID</mat-label>
+    <input matInput placeholder="Placeholder">
+    </mat-form-field>
+    
+    <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Delete</button> -->
+    </form>
+    
+<br>
+<br>
+<br>
 
-        <p>Enter ID to delete user</p>
-        <mat-form-field appearance="outline">
-            <mat-label>ID</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
+    <form>
+    <p>Enter Name to get data</p>
+    <mat-form-field appearance="outline">
+    <mat-label >Name</mat-label>
+    <input name = "name" [(ngModel)] = "name" matInput placeholder="Placeholder">
+    </mat-form-field>
 
-        <!-- <button type = "submit" mat-raised-button color="primary" (click) = >Delete</button> -->
+    <br>
 
-        </form>
+    <button mat-raised-button color="primary" (click) = "doGet(this.data)">Get</button>
+    <br>
+    <br>
 
+    <form [formGroup]="dataForm">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label >Count:</mat-label>
+                <input type="text" name = "count" matInput placeholder="Placeholder" formControlName="count">
+            </mat-form-field>
+        </div>
+        <div>
+
+            <mat-form-field appearance="outline">
+                <mat-label >Name:</mat-label>
+                <input type="text" name = "name" matInput placeholder="Placeholder" formControlName="name">
+            </mat-form-field>
+        </div>  
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label >Age:</mat-label>
+                <input type="text" name = "age" matInput placeholder="Placeholder" formControlName="age">
+            </mat-form-field>
+        </div>
+    </form>
+
+    </form>
     </div>
-</div>  
+</div> 
+    
